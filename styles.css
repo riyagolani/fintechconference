@@ -19,6 +19,8 @@ body {
 .hero-image {
     width: 100%;
     height: auto;
+    min-height: 220px;
+    object-fit: cover;
     display: block;
 }
 
@@ -33,21 +35,21 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 100%;
+    width: 90%;
 }
 
 .hero-text.main-title h1 {
     font-family: 'Fraunces', serif;
-    font-size: 4em;
+    font-size: 4vw;
     font-weight: 700;
-    margin-bottom: 0em;
+    margin-bottom: 0.2em;
 }
 
 .hero-text.main-title h2 {
     font-family: 'Fraunces', serif;
-    font-size: 2em;
+    font-size: 3vw;
     font-weight: 400;
-    margin-top: 0em;
+    margin-top: 0;
 }
 
 .hero-text.info {
@@ -66,6 +68,49 @@ body {
     margin-right: 5px;
 }
 
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1040px) {
+    .hero-text.info {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+    .hero-text.info {
+        right: 2px;
+        bottom: 10px;
+        font-size: 12px;
+    }
+    .hero-text.info p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text.main-title h1 {
+        font-size: 8vw;
+    }
+
+    .hero-text.main-title h2 {
+        font-size: 4vw;
+    }
+
+    .hero-text.info {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    .hero-text.info p {
+        margin: 0;
+    }
+}
 
 nav {
     background-color: #003366;
@@ -149,6 +194,44 @@ main {
 .register-btn.disabled:hover {
     background-color: #cccccc;
     transform: none;
+}
+
+.panel {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.panel h3 {
+    color: #003366;
+    font-family: 'Fraunces', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.panel .moderator,
+.panel .presenter,
+.panel .host {
+    margin-bottom: 10px;
+}
+
+.panel ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.panel li {
+    margin-bottom: 5px;
+}
+
+.speaker-link {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.speaker-link:hover {
+    text-decoration: underline;
 }
 
 footer {
